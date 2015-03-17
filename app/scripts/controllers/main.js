@@ -8,7 +8,7 @@ var myApp = angular.module('mgcrea.WafApp');
     $scope.version = version;
 
   })
-myApp.controller('EtatCtrl', function ($scope, $http) {
+myApp.controller('EtatCtrl', function ($scope, $http,$log) {
   $scope.isSelected = 'Allume';
   $scope.onText = 'ON';
 
@@ -22,10 +22,11 @@ myApp.controller('EtatCtrl', function ($scope, $http) {
   $scope.inverse = true;
 
   $scope.$watch('isSelected', function() {
-
-  });
+    $log.info("selected");
+    });
 
   $scope.toggle = function() {
+
     $scope.isSelected = $scope.isSelected === 'Allume' ? 'Eteint' : 'Allume';
     var dataObj = {
       page:"EtatWaf",

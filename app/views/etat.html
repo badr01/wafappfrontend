@@ -23,13 +23,13 @@
       ng-true-value="'Allume'"
       ng-false-value="'Eteint'"
       switch-inverse="{{ !inverse }}"
-      switch-readonly="{{ readonly }}"
-      ng-click="toggle()">
+
+      ng-change="toggle();">
 
   <h3>Haproxy :</h3>
       <input
         bs-switch
-        ng-model="isSelected"
+        ng-model="isSelected1"
         type="checkbox"
         switch-active="{{ isActive }}"
         switch-on-text="{{ onText }}"
